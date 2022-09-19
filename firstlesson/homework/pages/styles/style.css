@@ -1,0 +1,1018 @@
+@font-face {
+  font-family: Namefont;
+  src: url(../fonts/Name_font.ttf);
+}
+
+@font-face {
+  font-family: Headerfont;
+  src: url(../fonts/Headers_font.ttf);
+}
+
+@font-face {
+  font-family: Mainfont;
+  src: url(../fonts/Main_font.otf);
+}
+
+.bodyset{
+  background: #F5F0E1;
+  padding: 0;
+  margin: 0;
+}
+
+.firstheaderblock{
+  width: 100%;
+  height: 150px;
+  background-color: #F9D10F;
+}
+
+.secondheaderblock{
+  width: 100%;
+  height: 50px;
+  background-color: #EAE5F4;
+}
+
+.bottomblock{
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  position: fixed;
+  background-color: #F9D10F;
+}
+
+.outerimageblock{
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  display: flex;
+  background-color: #F8F8F8;
+}
+
+.imageblock{
+  width: 220px;
+  height: 220px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+}
+
+.imageblock img{
+  margin: auto;
+  width: 100%;
+  transform: scale(1,1);
+  transition: 0.5s ease;
+}
+
+.imageblock:hover img{
+  transform: scale(1.25,1.25);
+}
+
+.imageblockposition{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.nameblock{
+  width: 400px;
+  height: 180px;
+  position: absolute;
+  left: 350px;
+  top: 13px;
+  border-radius: 1% 1% 1% 1%;
+  background-color: #708090;
+  border-style: solid;
+  border-width: 4px;
+  border-color: #F8F8F8;
+  box-shadow: inset 0 0 9px #F5F0E1;
+}
+
+.firstcircle{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 355px;
+  top: 18px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  box-shadow: inset 0 0 4px;
+}
+
+.secondsircle{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 737.5px;
+  top: 18px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  box-shadow: inset 0 0 4px;
+}
+
+.thirdcircle{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 355px;
+  top: 179.5px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  box-shadow: inset 0 0 4px;
+}
+
+.fourthcircle{
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 737.5px;
+  top: 179.5px;
+  border-radius: 50%;
+  background-color: #F8F8F8;
+  box-shadow: inset 0 0 4px;
+}
+
+.goleftbacktext{
+  position: fixed;
+  top: 13px;
+  left: 1518px;
+  transition: 1.5s ease;
+}
+
+.goleftbacktext:hover{
+  position: fixed;
+  top: 13px;
+  left: 1455px;
+}
+
+.backtext{
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Namefont;
+  color: #0A1B2B;
+  text-decoration: none;
+}
+
+.verticalline{
+  border-left: 3px solid #0A1B2B;
+  display: inline-block;
+  position: absolute;
+  top: 236px;
+  left: 900px;
+  height: 480px;
+  width: 0px;
+  opacity: 0;
+  animation: lineopacity 6s forwards;
+}
+
+@keyframes lineopacity{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.name{
+  position: absolute;
+  left: 20px;
+  top: -25px;
+  font-size: 36px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #F8F8F8;
+  font-family: Namefont;
+}
+
+.surname{
+  position: absolute;
+  left: 20px;
+  top: -12px;
+  font-size: 52px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #F8F8F8;
+  font-family: Namefont;
+}
+
+.prof{
+  position: absolute;
+  left: 20px;
+  top: 105px;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #F8F8F8;
+  font-family: Namefont;
+  font-weight: lighter;
+}
+
+.line{
+  color: #F8F8F8;
+  position: relative;
+  cursor: default;
+  text-decoration: none;
+}
+.line:after{
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: #F8F8F8;
+  transition: width 0.5s;
+  cursor: default;
+}
+
+.line:hover:after{
+  content: "";
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 3px;
+  background-color: #F8F8F8;
+  transition: width 0.5s;
+  cursor: default;
+}
+
+.shadow-text{
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.shadow-text:hover{
+  -webkit-text-shadow: 2px 2px 3px #0A1B2B;
+  -moz-text-shadow: 2px 2px 3px #0A1B2B;
+  text-shadow: 2px 2px 3px #0A1B2B;
+  cursor: default;
+}
+
+.shadow-text-back{
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.shadow-text-back:hover{
+  -webkit-text-shadow: 2px 2px 3px #0A1B2B;
+  -moz-text-shadow: 2px 2px 3px #0A1B2B;
+  text-shadow: 2px 2px 3px #0A1B2B;
+  cursor: pointer;
+}
+
+.aboutmeblock{
+  position: absolute;
+  top: 300px;
+  left: 70px;
+}
+
+.aboutme{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.aboutmetextblock{
+  position: absolute;
+  top: 330px;
+  left: 70px;
+  width: 750px;
+  height: 50px;
+  text-align: justify;
+}
+
+.aboutmetext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.personalblock{
+  position: absolute;
+  top: 440px;
+  left: 70px;
+}
+
+.personal{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.personalagetextblock{
+  position: absolute;
+  display: inline-block;
+  top: 470px;
+  left: 70px;
+  width: 300px;
+  height: 20px;
+  text-align: justify;
+}
+
+.personalbirthtextblock{
+  position: absolute;
+  display: inline-block;
+  top: 495px;
+  left: 70px;
+  width: 300px;
+  height: 20px;
+  text-align: justify;
+}
+
+.personalrelationtextblock{
+  position: absolute;
+  display: inline-block;
+  top: 520px;
+  left: 70px;
+  width: 300px;
+  height: 20px;
+  text-align: justify;
+}
+
+.personalnationtextblock{
+  position: absolute;
+  display: inline-block;
+  top: 545px;
+  left: 70px;
+  width: 300px;
+  height: 20px;
+  text-align: justify;
+}
+
+.personaltext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.skillsblock{
+  position: absolute;
+  top: 440px;
+  left: 570px;
+}
+
+.skills{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.skillhtmlblock{
+  position: absolute;
+  top: 470px;
+  left: 570px;
+  width: 200px;
+}
+
+.skillhtml{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.skillcssblock{
+  position: absolute;
+  top: 495px;
+  left: 570px;
+  width: 200px;
+}
+
+.skillcss{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.skilljsblock{
+  position: absolute;
+  top: 520px;
+  left: 570px;
+  width: 200px;
+}
+
+.skilljs{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.skilljavablock{
+  position: absolute;
+  top: 545px;
+  left: 570px;
+  width: 200px;
+}
+
+.skilljava{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.contactsblock{
+  position: absolute;
+  top: 580px;
+  left: 70px;
+}
+
+.contacts{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.telephoneimageblock{
+  position: absolute;
+  top: 613.5px;
+  left: 70px;
+}
+
+.telephoneimage{
+  width: 16px;
+  height: 16px;
+}
+
+.telephoneblock{
+  position: absolute;
+  top: 610px;
+  left: 100px;
+}
+
+.telephone{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.mailimageblock{
+  position: absolute;
+  top: 638.5px;
+  left: 70px;
+}
+
+.mailimage{
+  width: 22px;
+  height: 16px;
+}
+
+.mailblock{
+  position: absolute;
+  top: 635px;
+  left: 100px;
+}
+
+.mail{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.locationimageblock{
+  position: absolute;
+  top: 663.5px;
+  left: 70px;
+}
+
+.locationimage{
+  width: 16px;
+  height: 16px;
+}
+
+.locationblock{
+  position: absolute;
+  top: 660px;
+  left: 100px;
+}
+
+.location{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.linksblock{
+  position: absolute;
+  top: 580px;
+  left: 390px;
+}
+
+.links{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.githubimageblock{
+  position: absolute;
+  top: 613.5px;
+  left: 390px;
+}
+
+.githubimage{
+  width: 16px;
+  height: 16px;
+}
+
+.githubblock{
+  position: absolute;
+  top: 610px;
+  left: 420px;
+}
+
+.github{
+  font-family: Mainfont;
+  font-size: 22px;
+  color: #000000;
+}
+
+.linkedinimageblock{
+  position: absolute;
+  top: 638.5px;
+  left: 390px;
+}
+
+.linkedinimage{
+  width: 16px;
+  height: 16px;
+}
+
+.linkedinblock{
+  position: absolute;
+  top: 635px;
+  left: 420px;
+}
+
+.linkedin{
+  font-family: Mainfont;
+  font-size: 22px;
+  color: #000000;
+}
+
+.telegramimageblock{
+  position: absolute;
+  top: 663.5px;
+  left: 390px;
+}
+
+.telegramimage{
+  width: 16px;
+  height: 14px;
+}
+
+.telegramblock{
+  position: absolute;
+  top: 660px;
+  left: 420px;
+}
+
+.telegram{
+  font-family: Mainfont;
+  font-size: 22px;
+  color: #000000;
+}
+
+.skypeimageblock{
+  position: absolute;
+  top: 688.5px;
+  left: 390px;
+}
+
+.skypeimage{
+  width: 16px;
+  height: 14px;
+}
+
+.skypeblock{
+  position: absolute;
+  top: 685px;
+  left: 420px;
+}
+
+.skype{
+  font-family: Mainfont;
+  font-size: 22px;
+  color: #000000;
+}
+
+.hobbiesblock{
+  position: absolute;
+  top: 580px;
+  left: 570px;
+}
+
+.hobbies{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.bicycleimageblock{
+  position: absolute;
+  top: 613.5px;
+  left: 570px;
+}
+
+.bicycleimage{
+  width: 16px;
+  height: 10px;
+}
+
+.bicycleblock{
+  position: absolute;
+  top: 610px;
+  left: 600px;
+}
+
+.bicycle{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.gamingimageblock{
+  position: absolute;
+  top: 638.5px;
+  left: 570px;
+}
+
+.gamingimage{
+  width: 16px;
+  height: 11px;
+}
+
+.gamingblock{
+  position: absolute;
+  top: 635px;
+  left: 600px;
+}
+
+.gaming{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.travellingimageblock{
+  position: absolute;
+  top: 663.5px;
+  left: 570px;
+}
+
+.travellingimage{
+  width: 16px;
+  height: 16px;
+}
+
+.travellingblock{
+  position: absolute;
+  top: 660px;
+  left: 600px;
+}
+
+.travelling{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.bookimageblock{
+  position: absolute;
+  top: 688.5px;
+  left: 570px;
+}
+
+.bookimage{
+  width: 16px;
+  height: 12px;
+}
+
+.bookblock{
+  position: absolute;
+  top: 685px;
+  left: 600px;
+}
+
+.book{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.educationblock{
+  position: absolute;
+  top: 230px;
+  left: 970px;
+}
+
+.education{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.schoolyearblock{
+  position: absolute;
+  top: 260px;
+  left: 970px;
+  width: 150px;
+}
+
+.schoolyeartext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.schooltextblock{
+  position: absolute;
+  top: 280px;
+  left: 1150px;
+  width: 350px;
+}
+
+.schooltext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.stepyearblock{
+  position: absolute;
+  top: 320px;
+  left: 970px;
+  width: 150px;
+}
+
+.stepyeartext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.steptextblock{
+  position: absolute;
+  top: 340px;
+  left: 1150px;
+  width: 350px;
+}
+
+.steptext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.bayearblock{
+  position: absolute;
+  top: 380px;
+  left: 970px;
+  width: 150px;
+}
+
+.bayeartext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.batextblock{
+  position: absolute;
+  top: 400px;
+  left: 1150px;
+  width: 350px;
+}
+
+.batext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.uniyearblock{
+  position: absolute;
+  top: 440px;
+  left: 970px;
+  width: 150px;
+}
+
+.uniyeartext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.unitextblock{
+  position: absolute;
+  top: 440px;
+  left: 1150px;
+  width: 350px;
+}
+
+.unitext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.schoollineblock{
+  border-left: 1px solid #0A1B2B;
+  display: inline-block;
+  position: absolute;
+  top: 263px;
+  left: 1100px;
+  height: 40px;
+  width: 0px;
+}
+
+.steplineblock{
+  border-left: 1px solid #0A1B2B;
+  display: inline-block;
+  position: absolute;
+  top: 323px;
+  left: 1100px;
+  height: 40px;
+  width: 0px;
+}
+
+.balineblock{
+  border-left: 1px solid #0A1B2B;
+  display: inline-block;
+  position: absolute;
+  top: 383px;
+  left: 1100px;
+  height: 40px;
+  width: 0px;
+}
+
+.unilineblock{
+  border-left: 1px solid #0A1B2B;
+  display: inline-block;
+  position: absolute;
+  top: 443px;
+  left: 1100px;
+  height: 40px;
+  width: 0px;
+}
+
+.experienceblock{
+  position: absolute;
+  top: 510px;
+  left: 970px;
+}
+
+.experience{
+  font-family: Headerfont;
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.exptextblock{
+  position: absolute;
+  top: 540px;
+  left: 970px;
+  width: 400px;
+  height: 100px;
+  text-align: justify;
+}
+
+.exptext{
+  font-family: Mainfont;
+  font-size: 22px;
+}
+
+.goaboutmetext{
+  position: absolute;
+  top: 300px;
+  left: 70px;
+  width: 750px;
+  height: 50px;
+  animation: goaboutmetextright 3s forwards;
+}
+
+@keyframes goaboutmetextright{
+  from{
+    top: 0px;
+    left: -2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+.gopersonaltext{
+  position: absolute;
+  top: 440px;
+  left: 70px;
+  width: 150px;
+  height: 200px;
+  animation: gopersonaltextright 3.25s forwards;
+}
+
+@keyframes gopersonaltextright{
+  from{
+    top: 0px;
+    left: -2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+.gocontactstext{
+  position: absolute;
+  top: 580px;
+  left: 70px;
+  width: 320px;
+  height: 150px;
+  animation: gocontactstextright 3.4s forwards;
+}
+
+@keyframes gocontactstextright{
+  from{
+    top: 0px;
+    left: -2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+.goskillstext{
+  position: absolute;
+  top: 440px;
+  left: 570px;
+  animation: goskillstextright 3.1s forwards;
+}
+
+@keyframes goskillstextright{
+  from{
+    top: 0px;
+    left: -2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+.golinkstext{
+  position: absolute;
+  top: 580px;
+  left: 390px;
+  animation: golinkstextright 3.3s forwards;
+}
+
+@keyframes golinkstextright{
+  from{
+    top: 0px;
+    left: -2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+.gohobbiestext{
+  position: absolute;
+  top: 580px;
+  left: 570px;
+  animation: gohobbiestextright 3.2s forwards;
+}
+
+@keyframes gohobbiestextright{
+  from{
+    top: 0px;
+    left: -2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+.goedutext{
+  position: fixed;
+  top: 230px;
+  left: 970px;
+  animation: goedutextright 3s forwards;
+}
+
+@keyframes goedutextright{
+  from{
+    top: 0px;
+    left: 2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}
+
+.goexptext{
+  position: fixed;
+  top: 510px;
+  left: 970px;
+  animation: goexptextright 3.5s forwards;
+}
+
+@keyframes goexptextright{
+  from{
+    top: 0px;
+    left: 2000px;
+  }
+  to{
+    top: 0;
+    left: 0;
+  }
+}

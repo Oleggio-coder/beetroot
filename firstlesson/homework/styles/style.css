@@ -1,0 +1,87 @@
+@font-face{
+  font-family: Startfont;
+  src: url(../fonts/Starting_font.ttf);
+}
+
+*{
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+
+a{
+  text-decoration: none;
+}
+
+.bodycolor{
+  /*background-color: #87CEFA;*/
+  /*background-color: #FF9A8D;*/
+  /*background-color: #FFED7B;*/
+  background-color: #AFD9DF;
+}
+
+.centered{
+  position: fixed;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.textopacity{
+  opacity: 0;
+  animation: aniop 3.5s forwards;
+}
+
+@keyframes aniop{
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.button{
+  /*color: #EFF8FF;*/
+  color: #676B81;
+  cursor: pointer;
+  display: block;
+  font-family: Startfont;
+  font-size: 64px;
+  line-height: 73px;
+  margin: 10px;
+  max-width: 250px;
+  width: 150%;
+  height: 60px;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.button-3{
+  border-bottom: 3px solid #E0B4B6;
+  overflow: hidden;
+  position: relative;
+}
+
+.button-3 span{
+  z-index: 1;
+}
+
+.button-3:after{
+  content: ' ';
+  display: block;
+  width: 150%;
+  height: 3px;
+  background: #E0B4B6;
+  transition: height 200ms ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0; 
+  z-index: -1;
+}
+
+.button-3:hover:after{
+  bottom: 0;
+  top: 0;
+  height: 100%;
+  background: #E0B4B6;
+}
