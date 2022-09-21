@@ -1,0 +1,42 @@
+.visual-section {
+  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+}
+
+.container {
+  width: 500px;
+  height: 300px;
+
+  width: 100%;
+  max-width: 1500px;
+
+  min-height: 300px;
+  overflow-x: auto;
+  overflow-y: auto;
+  overflow-y: scroll;
+  overflow: hidden;
+}
+
+.text-holder {
+  color: #260047;
+  background-color: #002357;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 46px;
+  color: #063541;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  text-align: left;
+  list-style: none;
+}
