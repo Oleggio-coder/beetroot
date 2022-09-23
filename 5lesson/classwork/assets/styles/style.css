@@ -1,0 +1,107 @@
+* {
+  /*Для всех элементов на странице
+  Универсальный селектор
+  Самый низкий приоритет*/
+
+  color: darkblue;
+}
+
+h2 {
+  /*Глобальный селектор тега
+  Перебил селектор * */
+
+  font-size: 48px;
+  color: orange;
+}
+
+.title-h2 {
+  /*Селектор класса
+  Перебил стили класса тега*/
+
+  color: green;
+  font-size: 50px;
+}
+
+.text-holder {
+  /*Селектор класса аналогично*/
+
+  color: gold !important;
+  font-size: 20px !important;
+}
+
+/*id-селектор перебивает все*/
+
+#text-id {
+  /*Самый высокий приоритет
+  Перебивает все селекторы
+  НО есть команда !important (сверху) которая перебивает id
+  id стилить нельзя!*/
+
+  font-size: 35px;
+  color: violet;
+}
+
+/*CHILD селекторы*/
+
+.text-holder .child-text {
+  /*Обращение к дочернему классу*/
+
+  font-size: 10px;
+  border-color: aqua;
+}
+
+.text-holder div {
+  border-color: brown;
+}
+
+.child-text {
+  border: 5px solid red;
+}
+
+.column {
+  max-width: 500px;
+}
+
+.font {
+  font-style: italic;
+}
+
+.child-text.column {
+  /*Обращение к доп классу*/
+
+  max-width: 800px;
+}
+
+/*Селектор "плюс" или селектор соседей*/
+
+.child-text + .text-holder:hover {
+  /*Зачастую hover состояние делается на ссылках и для button*/
+
+  background-color: skyblue;
+}
+
+.child-text + .text-holder {
+  background-color: yellowgreen;
+
+  /*transition прописывается на дефолтное состояние а не на hover!!!*/
+  transition: background-color ease-in-out 0.3s;
+}
+
+/*Селектор "тильда"
+Как и "плюс" но не такой строгий*/
+
+.child-text ~ .text-holder {
+  background-color: deeppink;
+}
+
+/*Также влияет на приоритетность порядок классов css в файле
+Чем ниже тем приоритетнее*/
+
+/*Для тегов в самом вверху
+Потом идут классы и т.д.*/
+
+.child-text + a.text-holder:hover {
+  font-size: 48px;
+  display: block;
+}
+
