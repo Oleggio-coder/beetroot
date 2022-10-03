@@ -1,3 +1,15 @@
+body {
+  font-family: 'gemunu_libre';
+}
+
+body span {
+  font-family: 'roboto_condensed';
+}
+
+.roboto {
+  font-family: 'roboto_condensed';
+}
+
 .icons-list {
   list-style: none;
 }

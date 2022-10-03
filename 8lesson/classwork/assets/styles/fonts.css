@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'roboto_condensed';
+  src: url('../fonts/robotocondensed-bolditalic-webfont.eot');
+  src: url('../fonts/robotocondensed-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/robotocondensed-bolditalic-webfont.woff2') format('woff2'),
+       url('../fonts/robotocondensed-bolditalic-webfont.woff') format('woff'),
+       url('../fonts/robotocondensed-bolditalic-webfont.ttf') format('truetype'),
+       url('../fonts/robotocondensed-bolditalic-webfont.svg#roboto_condensedbold_italic') format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gemunu_libre';
+  src: url('../fonts/gemunulibre-variablefont_wght-webfont.eot');
+  src: url('../fonts/gemunulibre-variablefont_wght-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/gemunulibre-variablefont_wght-webfont.woff2') format('woff2'),
+       url('../fonts/gemunulibre-variablefont_wght-webfont.woff') format('woff'),
+       url('../fonts/gemunulibre-variablefont_wght-webfont.ttf') format('truetype'),
+       url('../fonts/gemunulibre-variablefont_wght-webfont.svg#gemunu_libreextralight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
