@@ -1,0 +1,52 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.header {
+  height: 400px;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.aside {
+  position: relative;
+  width: 20%;
+}
+
+.aside .nav-list {
+  position: sticky;
+  top: 0;
+  padding: 20px;
+  border: 1px solid red;
+  list-style: none;
+}
+
+.col {
+  position: relative;
+  width: calc(100% / 3);
+  padding: 20px;
+  border: 1px solid green;
+}
+
+.decor {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: blueviolet;
+  top: 10px;
+  left: 10px;
+}
