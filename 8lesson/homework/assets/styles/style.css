@@ -1,0 +1,318 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'pt_sans';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 48px;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'francois_one';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+h2 {
+  font-family: 'francois_one';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+h3 {
+  font-family: 'francois_one';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+h4 {
+  font-family: 'francois_one';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+sup {
+  font-family: 'farro';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #000000;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+p {
+  font-family: 'pt_sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 48px;
+  color: #000000;
+  margin: 0;
+  padding-top: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container .language-select {
+  float: left;
+  padding-top: 29px;
+  padding-left: 120px;
+}
+
+.language-link {
+  font-family: 'tourney';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 18px;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  color: #000000;
+  display: block;
+}
+
+.container .logo-holder {
+  display: block;
+  float: right;
+  padding-right: 120px;
+  padding-top: 16px;
+}
+
+.container .nav-list {
+  display: block;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container .list-holder {
+  display: block;
+  float: left;
+  padding-top: 26px;
+  padding-left: 50px;
+}
+
+.nav-list .nav-item {
+  display: block;
+  float: left;
+  padding-right: 10px;
+}
+
+.nav-item .nav-link {
+  text-decoration: none;
+  font-family: 'staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  display: block;
+  float: left;
+}
+
+.nav-item-before:before {
+  content: '/';
+  padding-right: 10px;
+  font-family: 'staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  color: #000000;
+  display: block;
+  float: left;
+}
+
+.main .container {
+  max-width: 1400px;
+  text-align: justify;
+}
+
+.hero-section .container {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 85px;
+  padding-left: 120px;
+}
+
+.container .hero-text {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.hero-text h1 {
+  display: block;
+  float: left;
+}
+
+.hero-text sup {
+  display: block;
+  float: left;
+}
+
+.text-holder p {
+  display: block;
+  float: left;
+}
+
+.hero-text span {
+  text-decoration: underline;
+}
+
+.core-components-section .container {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 70px;
+  padding-left: 120px;
+}
+
+.core-components-section .container {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 85px;
+  padding-left: 120px;
+}
+
+.container .core-components-text {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.core-components-text h2 {
+  display: block;
+  float: left;
+}
+
+.core-components-text sup {
+  display: block;
+  float: left;
+}
+
+.core-components-text span {
+  font-style: italic;
+}
+
+.react-section .container {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 70px;
+  padding-left: 120px;
+}
+
+.container .react-text {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.react-text h3 {
+  display: block;
+  float: left;
+}
+
+.react-text sup {
+  display: block;
+  float: left;
+}
+
+.text-holder mark {
+  background: lightgray;
+}
+
+.react-section span {
+  text-decoration: underline;
+}
+
+.react-section p {
+  padding-top: 40px;
+}
+
+.react-section .hero-react {
+  padding-top: 0;
+}
+
+.handling-text span {
+  font-style: italic;
+}
+
+.handling-section .container {
+  display: block;
+  float: left;
+  width: 100%;
+  padding-top: 70px;
+  padding-left: 120px;
+}
+
+.container .handling-text {
+  display: block;
+  float: left;
+  width: 100%;
+}
+
+.handling-text h4 {
+  display: block;
+  float: left;
+}
+
+.handling-text sup {
+  display: block;
+  float: left;
+}
+
+.handling-section p {
+  padding-top: 40px;
+}
+
+.handling-section .hero-handling {
+  padding-top: 0;
+}
+
+.handling-section .bottom-handling {
+  padding-bottom: 90px;
+}
+
