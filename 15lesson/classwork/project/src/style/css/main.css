@@ -1,0 +1,47 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.hero {
+  padding: 100px 0;
+  background-color: lightcyan;
+  color: #000000;
+  margin: 0 0 20px;
+}
+.hero.hero-pink {
+  background-color: lightpink;
+}
+.hero.hero-azure {
+  background-color: azure;
+}
+.hero.hero-azure.hero-biscue {
+  background-color: bisque;
+}
+.hero .container {
+  max-width: 1000px;
+}
+.hero .container .text-holder p .icon-holder .icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: coral;
+}
