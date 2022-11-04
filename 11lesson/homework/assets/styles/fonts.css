@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'farro';
+  src: url('../fonts/farro-light-webfont.eot');
+  src: url('../fonts/farro-light-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/farro-light-webfont.woff2') format('woff2'),
+       url('../fonts/farro-light-webfont.woff') format('woff'),
+       url('../fonts/farro-light-webfont.ttf') format('truetype'),
+       url('../fonts/farro-light-webfont.svg#farrolight') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'francois_one';
+  src: url('../fonts/francoisone-regular-webfont.eot');
+  src: url('../fonts/francoisone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/francoisone-regular-webfont.woff2') format('woff2'),
+       url('../fonts/francoisone-regular-webfont.woff') format('woff'),
+       url('../fonts/francoisone-regular-webfont.ttf') format('truetype'),
+       url('../fonts/francoisone-regular-webfont.svg#francois_oneregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pt_sans';
+  src: url('../fonts/ptsans-regular-webfont.eot');
+  src: url('../fonts/ptsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/ptsans-regular-webfont.woff2') format('woff2'),
+       url('../fonts/ptsans-regular-webfont.woff') format('woff'),
+       url('../fonts/ptsans-regular-webfont.ttf') format('truetype'),
+       url('../fonts/ptsans-regular-webfont.svg#pt_sansregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'staatliches';
+  src: url('../fonts/staatliches-regular-webfont.eot');
+  src: url('../fonts/staatliches-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/staatliches-regular-webfont.woff2') format('woff2'),
+       url('../fonts/staatliches-regular-webfont.woff') format('woff'),
+       url('../fonts/staatliches-regular-webfont.ttf') format('truetype'),
+       url('../fonts/staatliches-regular-webfont.svg#staatlichesregular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'tourney';
+  src: url('../fonts/tourney-semibold-webfont.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
