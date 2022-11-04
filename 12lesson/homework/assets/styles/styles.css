@@ -1,0 +1,144 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FFFFFF;
+}
+
+h1, h2, h3 {
+  font-family: 'delius_unicase';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #000000;
+}
+
+span {
+  font-family: 'roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #E0E0E0;
+}
+
+img {
+  border-radius: 20px;
+  position: relative;
+  z-index: -1;
+}
+
+.title-holder {
+  display: block;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.image-holder {
+  overflow: hidden;
+  border-radius: 20px;
+  background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+}
+
+.jezael-melgoza .image-holder {
+  height: 370px;
+  width: 370px;
+}
+
+.tom-w .image-holder {
+  height: 370px;
+  width: 770px;
+}
+
+.johan-mouchet .image-holder {
+  height: 370px;
+  width: 770px;
+}
+
+.federico-di-dio .image-holder {
+  height: 370px;
+  width: 370px;
+}
+
+.casey-horner .image-holder {
+  height: 370px;
+  width: 370px;
+}
+
+.alexander-rotker .image-holder {
+  height: 370px;
+  width: 770px;
+}
+
+.architectural-photography div .jezael-melgoza, 
+.architectural-photography div .johan-mouchet, 
+.architectural-photography div .casey-horner {
+  padding-left: 135px;
+  padding-right: 15px;
+}
+
+.architectural-photography div .tom-w, 
+.architectural-photography div .federico-di-dio, 
+.architectural-photography div .alexander-rotker {
+  padding-right: 135px;
+  padding-left: 15px;
+}
+
+.architectural-photography div .jezael-melgoza, 
+.architectural-photography div .tom-w, 
+.architectural-photography div .johan-mouchet, 
+.architectural-photography div .federico-di-dio {
+  padding-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.jezael-melgoza {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.tom-w {
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.johan-mouchet {
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.federico-di-dio {
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.casey-horner {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.alexander-rotker {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
