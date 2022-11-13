@@ -1,0 +1,49 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-size: $base-font-size;
+}
+
+h1 {
+  margin: 0 0 20px;
+  font-size: 30px;
+  color: $title-color;
+
+  //&.title {
+  //  color: white;
+  //}
+}
+
+.title-holder {
+  h1 {
+    color: #fff;
+  }
+}
+
+.hero {
+  h1 {
+    color: #fff;
+  }
+}
+
+.container {
+  @extend %container;
+}
+
+p {
+  @extend %paragraf;
+}
+
+.input-holder {
+  width: 600px;
+}
+
+input {
+  width: $input-width;
+}
+
