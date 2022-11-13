@@ -1,0 +1,39 @@
+.hero {
+  padding: 100px 0;
+  background-color: lightcyan;
+  color: #000000;
+  margin: 0 0 20px;
+
+  &.hero-pink {
+    background-color: lightpink;
+  }
+
+  &.hero-azure {
+    background-color: azure;
+
+    &.hero-biscue {
+      background-color: bisque;
+    }
+  }
+
+  .container {
+    max-width: 1000px;
+
+    .text-holder {
+
+      p {
+
+        .icon-holder {
+
+          .icon {
+            display: block;
+            width: 20px;
+            height: 20px;
+            background-color: coral;
+          }
+        }
+      }
+    }
+  }
+
+}
