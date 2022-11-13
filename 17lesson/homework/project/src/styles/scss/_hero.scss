@@ -1,0 +1,67 @@
+.hero {
+  padding: 100px 0;
+  background-color: grey;
+  color: #fff;
+  margin: 0 0 20px;
+
+  &.hero-black {
+    background-color: red;
+
+    &.hero-orange {
+      background-color: orange;
+    }
+  }
+
+  .container {
+    max-width: 1000px;
+  }
+
+  .text-holder {
+    strong {
+      color: $title-color;
+    }
+  }
+}
+
+.btn-green {
+  @extend .btn;
+  //@include animate(opacity, 0.3s);
+  //@include linear-gradient(#00FFFF,#0080FF,45deg);
+
+  display: inline-block;
+  padding-left: 40px;
+  position: relative;
+  background-color: grey;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:before {
+    //@include triangle(15px 10px, $dark-grey, down);
+
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+  }
+
+  &:after {
+    content: '';
+
+    //@include cubic(.1, .7, 1.0, .1);
+  }
+}
+
+ul {
+  @extend %list;
+  //@include flex(flex-end, space-between);
+
+  li {
+    span {
+      //@include triangle(10px, #fff, left);
+
+      display: inline-block;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.btn {
+  background-color: red;
+  padding: $base-btn-padding;
+  border: 1px solid #000;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+
+  &:hover {
+    background-color: navy;
+  }
+}
+
+.bg {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+%list {
+  list-style: none;
+  padding: 0;
+}
+
+%paragraf {
+  margin: 0 0 8px;
+}
+
+%container {
+  max-width: 1200px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
