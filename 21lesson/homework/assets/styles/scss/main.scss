@@ -1,0 +1,143 @@
+/*
+.anim-holder {
+  position: relative;
+  width: 800px;
+  height: 700px;
+  margin: 0 auto;
+
+  .ball {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    border-radius: 50%;
+    animation-name: ballBg;
+    animation-duration: 3s;
+    //animation-duration: infinite;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    top: 100%;
+  }
+}
+
+@keyframes ballBg {
+  0% {background-color: palevioletred; top: 100%;}
+  50% {background-color: darkmagenta; top: 50%;}
+  100% {background-color: palevioletred; top: 100%;}
+}
+*/
+//css bounce animation codepen
+
+img {
+  max-width: 100%;
+}
+
+.anim-holder {
+  position: relative;
+  width: 800px;
+  height: 700px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+
+  .car-holder {
+    position: relative;
+    width: 25%;
+    height: 120px;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+    //animation-name: card;
+    //animation-duration: 3s;
+    //animation-iteration-count: 1;
+    //animation-play-state: paused;
+    transform-style: preserve-3d;
+    perspective: 10000px;
+
+    .back,
+    .front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backface-visibility: hidden;
+      transition: all ease-in-out 0.3s;
+    }
+
+    .back {
+      background-color: black;
+    }
+
+    .front {
+      transform: rotateY(180deg);
+    }
+
+    &:hover {
+      animation-play-state: running;
+    }
+  }
+
+  .ball {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 50%;
+    animation-name: bounce-in-bottom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    //top: 100%;
+  }
+}
+
+@for $i from 1 through 10 {
+  .car-holder:nth-of-type(#{$i}) {
+    animation-name: card;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: random(40) + s;
+  }
+}
+
+//@keyframes ballBg {
+//  0% {background-color: orange; top: 100%}
+//  25% {background-color: black; top: 70%;}
+//  50% {background-color: red; top: 100%;}
+//  75% {background-color: navy; top: 75%}
+//  83% {background-color: blue; top: 100%}
+//  90% {background-color: orange; top: 80%}
+//  100% {background-color: orange; top: 100%}
+//}
+//
+//@keyframes bounce-out-down {
+//  0% { transform: translateY(0); }
+//  20% {
+//    opacity: 1;
+//    transform: translateY(-20px);
+//  }
+//  100% {
+//    opacity: 0;
+//    transform: translateY(20px);
+//  }
+//}
+//
+//@keyframes bounce-in-bottom {
+//  0% {
+//    opacity: 0;
+//    transform: translateY(2000px);
+//  }
+//  60% {
+//    opacity: 1;
+//    transform: translateY(-30px);
+//  }
+//  80% { transform: translateY(10px); }
+//  100% { transform: translateY(0); }
+//}
+
+@keyframes card {
+  0% {transform: rotateY(0)}
+  50% {transform: rotateY(180deg)}
+  100% {transform: rotateY(0)}
+}
