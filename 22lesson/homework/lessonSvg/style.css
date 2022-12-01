@@ -1,0 +1,42 @@
+.icon-svg-holder {
+    cursor: pointer;
+}
+
+#path-1,
+#path-stroke {
+    transition: all ease-in-out 0.3s;
+}
+
+.icon-svg-holder:hover #path-1 {
+    fill: gold;
+}
+
+.icon-svg-holder:hover #path-stroke {
+    stroke: black;
+    stroke-opacity: 1;
+}
+
+.icon-svg-holder:hover #rupor {
+    fill: red;
+}
+
+.icon {
+    background-image: url("icons-sprite.svg");
+    display: inline-block;
+    width: 64px;
+    height: 65px;
+    background-position: -6px -5px;
+    transition: all ease-in-out 0.3s;
+}
+
+.icon.icon-store {
+    background-position: -96px -5px;
+}
+
+.icon.icon-store:hover {
+    background-position: -96px -64px;
+}
+
+.icon:hover {
+    background-position: -6px -64px;
+}
