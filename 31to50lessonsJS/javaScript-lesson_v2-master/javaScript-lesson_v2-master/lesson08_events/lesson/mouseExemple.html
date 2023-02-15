@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            background-color: aqua;
+            border: 1px solid;
+            position: relative;
+        }
+
+        .box:nth-child(3) {
+            top: 50%;
+            left: 50%;
+        }
+
+        .box:nth-child(1) {
+            top: 10%;
+            left: 90%;
+        }
+
+        .box:nth-child(2) {
+            top: 30%;
+            left: 20%;
+        }
+
+        .box:nth-child(4) {
+            top: 20%;
+            left: 80%;
+        }
+
+        .box:nth-child(7) {
+            top: 40%;
+            left: 50%;
+        }
+
+        .wrraper {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrraper">
+        <div class="box" data-speed="1"></div>
+        <div class="box" data-speed="0.3"></div>
+        <div class="box" data-speed="2"></div>
+        <div class="box" data-speed="0.8"></div>
+        <div class="box" data-speed="1.2"></div>
+        <div class="box" data-speed="3"></div>
+        <div class="box" data-speed="1.6"></div>
+        <div class="box" data-speed="1.8"></div>
+        <div class="box" data-speed="0.4"></div>
+        <div class="box" data-speed="0.2"></div>
+    </div>
+
+    <script>
+
+        let wrap = document.querySelector('.wrraper')
+        let box = document.querySelectorAll('.box')
+
+        wrap.addEventListener('mousemove', function (event) {
+            // box[2].style.transform = `translate(${event.clientX / 4}px, ${event.clientY / 4}px)`
+            box.forEach((item) => {
+                let speed = item.getAttribute('data-speed')
+                console.log(speed);
+                item.style.transform = `translate(${(event.clientX / 4) * speed}px, ${(event.clientY / 4) * speed}px)`
+            })
+        })
+
+        // Відслідковуж розмір єкрану
+        addEventListener('resize', function (event) {
+            console.log(window.outerWidth);
+        });
+
+        
+
+    </script>
+</body>
+
+</html>

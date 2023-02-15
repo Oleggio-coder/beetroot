@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .active {
+            background-color: red;
+        }
+
+        .box2 {
+
+            width: 100px;
+            height: 100px;
+            background-color: aquamarine;
+        }
+
+        img {
+            width: 300px;
+            height: 100px;
+            border: 1px solid;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="out">test</div>
+        <div class="out">test</div>
+        <div class="out">test</div>
+        <div class="out">test</div>
+        <div class="out">test</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <input type="text">
+    <div class="out2"></div>
+
+    <h3>Animation</h3>
+
+    <div class="box2"></div>
+
+    <img src="./1.jpeg" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit non sunt vitae laudantium, laboriosam deleniti
+        cum. Nam placeat corrupti non.</p>
+
+
+
+
+    <!-- <script src="./jquery3.6.3.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+
+        // Vanila JS
+        // let out = document.querySelectorAll('.out')
+        // out.forEach((item) => {
+        //     item.setAttribute('style', 'border: 1px solid')
+        // })
+
+
+
+        // Jquery
+
+        // :first / :last / :eq(0)
+        $('.out').css('border', '3px solid')
+
+        $('.out:eq(3)').css('border', '3px solid red')
+
+        // ми можемо звернутися до батька
+        $('.out').parent().css('border', '3px solid blue')
+
+
+        function log(log) {
+            console.log(log);
+        }
+        // Event
+        // dblclick
+        $('.out').dblclick(function () {
+            $(this).toggleClass('active')
+            //$(event.target).toggleClass('active')
+        })
+
+        $('input').change(function () {
+            $('.out2').text($(this).val())
+        })
+
+        $('input').keyup(function () {
+            $('.out2').text($(this).val())
+        })
+
+
+        // animation
+
+        //$('.box2').delay(1000).hide(1000).delay(1000).show(1000)
+        //$('.box2').animate({ 'height': '200px' }, 1000).animate({ 'height': '100px' }, 1000);
+
+        // dataAtribute
+
+        $('img').click(function () {
+            $(this).attr('src', './2.jpeg')
+        })
+
+        $('img').addClass('class');
+        $('img').append('Додаємо');
+        $('img').after('Додаємо після');
+        $('img').wrap('<h1> </h1>');
+
+
+    </script>
+</body>
+
+</html>

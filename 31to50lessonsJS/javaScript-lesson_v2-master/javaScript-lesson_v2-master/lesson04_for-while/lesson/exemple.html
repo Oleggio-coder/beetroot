@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carts {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3, 200px);
+        }
+
+        .carts__img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <input class="check" type="checkbox">
+        <span>Sasha 0</span>
+    </div>
+
+    <div>
+        <input class="check" type="checkbox">
+        <span>Sasha 1</span>
+    </div>
+
+    <div>
+        <input class="check" type="checkbox">
+        <span>Sasha 2</span>
+    </div>
+
+    <div>
+        <input class="check" type="checkbox">
+        <span>Sasha 3</span>
+    </div>
+
+    <div>
+        <input class="check" type="checkbox">
+        <span>Sasha 4</span>
+    </div>
+
+    <div>
+        <input class="check" type="checkbox">
+        <span>Sasha 5</span>
+    </div>
+
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+
+    <div class="carts">
+
+    </div>
+    <button class="more">Show more</button>
+    <script>
+
+        let check = document.querySelectorAll('.check');
+        let span = document.querySelectorAll('span');
+
+        for (let i = 0; i < check.length; i++) {
+            check[i].onchange = () => {
+                if (check[i].checked) {
+                    span[i].style.color = "red";
+                } else {
+                    span[i].style.color = "black";
+                }
+            }
+        }
+
+
+        let box = document.querySelectorAll('.box')
+
+        for (let i = 0; i < box.length; i++) {
+            box[i].onclick = () => {
+                box[i].innerHTML = "Sasha"
+            }
+        }
+
+        let carts = document.querySelector('.carts')
+
+        let a = 16;
+        for (let i = 0; i < a; i++) {
+            carts.innerHTML += `
+            <div class="carts__item">
+              <img class="carts__img" src="https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg" alt="">
+              <h2 class="carts__title"> Sasha </h2>
+              <p class="carts__text"> sdf asdf sdaf sadf asd fasdf asd </p>
+              <button> add </button>
+            </div>
+            `;
+        }
+
+        document.querySelector('.more').onclick = () => {
+            a = a + 16;
+            for (let i = 0; i < a; i++) {
+                carts.innerHTML += `
+            <div class="carts__item">
+              <img class="carts__img" src="https://cdn.britannica.com/91/181391-050-1DA18304/cat-toes-paw-number-paws-tiger-tabby.jpg" alt="">
+              <h2 class="carts__title"> Sasha </h2>
+              <p class="carts__text"> sdf asdf sdaf sadf asd fasdf asd </p>
+              <button> add </button>
+            </div>
+            `;
+            }
+        }
+
+
+
+
+        // check.onchange = () => {
+        //     if (check.checked) {
+        //         span.style.color = "red";
+        //     } else {
+        //         span.style.color = "black";
+        //     }
+        // }
+
+
+    </script>
+</body>
+
+</html>

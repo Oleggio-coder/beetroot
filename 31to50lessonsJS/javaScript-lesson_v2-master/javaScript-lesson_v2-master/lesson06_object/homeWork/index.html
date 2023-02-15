@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<input class="inp1" type="text" placeholder="login">
+<input class="inp2" type="password" placeholder="password">
+<!-- <label for="">
+    <input type="checkbox">
+    <span>Мені 18 років</span>
+</label> -->
+<button>Registration</button>
+
+<div class="out"></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="login">
+    <input class="inp3" type="text" placeholder="login">
+    <input class="inp4" type="password" placeholder="password">
+    <button class="btn">login</button>
+
+    <div class="out"></div>
+</div>
+
+<script>
+    let users = [];
+    let inp1 = document.querySelector('.inp1')
+    let inp2 = document.querySelector('.inp2')
+    let out = document.querySelector('.out');
+
+    document.querySelector('button').onclick = () => {
+        let obj = {
+            login: inp1.value,
+            password: inp2.value,
+            //oldAge: true
+        }
+        if (inp1.value && inp2.value) {
+            users.push(obj)
+            inp1.value = ''
+            inp2.value = ''
+            out.innerHTML = '<b style="color: green"> Дякую ви пройшли решестрацфю! </b>'
+        } else {
+            out.innerHTML = `<b style="color: red"> Заповніть всі поля </b>`
+        }
+
+        console.log(users);
+    }
+
+
+
+    document.querySelector('.btn').onclick = () => {
+        console.log(users);
+    }
+</script>
+</body>
+
+</html>

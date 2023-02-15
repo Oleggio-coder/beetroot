@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Сортування Строк і Чисел</h2>
+
+    <script>
+        // Сортування масивів
+        let sortArr = ['Д', 'Б', 'А', 'Г', 'В']
+        let sortNum = [1, 22, 10, 3]
+
+        // сортує по алфавіту
+        let sortRess = sortArr.sort()
+
+        console.log(sortRess); // Відсортовані строки по алфавіту
+
+        // цифри сортує як строки, щоб було вірно треба застосувати функцію, якак описана нижче
+        let sortNumRess = sortNum.sort()
+
+        // функція Якщо потрібно відсортувати цифри по порядку
+        function numSort(a, b) {
+            return a - b;
+        }
+
+        // Якщо потрібно відсортувати цифри по порядку
+        let sortNumRess1 = sortNum.sort(numSort)
+        let sortNumRess2 = sortNum.sort((a, b) => a - b);
+
+        console.log(sortNumRess1); // Відсортовані числа через Функцію
+        console.log(sortNumRess2); // Відсортовані числа через стрілочну функцію
+    </script>
+</body>
+
+</html>

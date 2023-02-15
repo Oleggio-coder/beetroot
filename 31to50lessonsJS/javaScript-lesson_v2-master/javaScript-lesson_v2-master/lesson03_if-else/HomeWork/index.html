@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Гра камінь/ножниці</h1>
+  <p>0 = камінь 1 = ножиці 2 = бумага 3 = колодяц</p>
+  <input class="inp" type="text" />
+  <button>Грати</button>
+  <h2>
+    Ваш результат:
+    <span class="out">Камінь vs Бумага</span>
+  </h2>
+  <script>
+    let inp = document.querySelector(".inp");
+    let out = document.querySelector(".out");
+    let button = document.querySelector("button");
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+
+    // 0 = камінь 1 = ножиці 2 = бумага 3 = колодяц
+    button.onclick = () => {
+      switch (inp.value) {
+        
+        case "камінь": {
+          if (getRandomInt(4) == 0) {
+            out.innerHTML = `Камінь vs Камінь `;
+          } else if (getRandomInt(4) == 1) {
+            out.innerHTML = `Камінь vs ножиці = Виграв`;
+          } else if (getRandomInt(4) == 2) {
+            out.innerHTML = `Камінь vs бумага = Програєм`;
+          } else if (getRandomInt(4) == 2) {
+            out.innerHTML = `Камінь vs колодяц = Програєм`;
+          }
+          break;
+        }
+        case "ножиці": {
+          console.log("камінь");
+          break;
+        }
+        default: {
+          console.log("Не вірно обранно!");
+          break;
+        }
+      }
+    };
+  </script>
+</body>
+
+</html>

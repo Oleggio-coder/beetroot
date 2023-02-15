@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrraper">
+        <button class="btn01">Click 0</button>
+        <button class="btn02">Click 1</button>
+        <button class="btn03">Click 2</button>
+        <button class="btn04">Click 3</button>
+
+        <a class="link1" href="javascript:void(0)">Link</a>
+
+        <section class="section1">
+            <h1>title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, nisi.</p>
+
+        </section>
+
+        <div class="box"></div>
+    </div>
+
+    <script>
+
+        let btn01 = document.querySelector('.btn01')
+        let btn02 = document.querySelector('.btn02')
+        let btn03 = document.querySelector('.btn04')
+        let link1 = document.querySelector('.link1')
+        let wrapp = document.querySelector('.wrraper')
+
+
+        // Превірка на помилки _v1
+        // if (btn01) {
+        //     btn01.onclick = () => {
+        //         console.log('Click 1');
+        //     }
+        //     btn01.onclick = () => {
+        //         console.log('Click 2');
+        //     }
+        // }
+
+        // Превірка на помилки _v2
+        // try {
+        //     btn01.onclick = () => {
+        //         console.log('Click 1');
+        //     }
+        //     btn01.onclick = () => {
+        //         console.log('Click 2');
+        //     }
+        // }
+        // catch {
+        //     console.log("Error");
+        // }
+
+        let option = {
+            "capture": false, // фаза на которой должен сработать обработчик
+            "once": false,    // якщо true то один раз
+            "passive": true, // никогда не зизовет preventDefault()
+        }
+
+        btn02.addEventListener('click', function (event) {
+            console.log("Click 1");
+        }, option)
+
+        btn02.addEventListener('click', function (event) {
+            console.log("Click 2");
+            console.log(event);
+
+        }, option)
+
+
+        link1.addEventListener('click', (event) => {
+            console.log(event);
+            event.preventDefault() // Не переходити по силці
+        })
+
+
+        // Знаходимо єлемент 
+        // wrapp.addEventListener('click', function (event) {
+        //     console.log(event.target);
+        // })
+
+
+        // Відслідковувати нажаття і відпускання кнопки
+        btn03.addEventListener('mousedown', function (event) {
+            console.log('Зажали');
+        })
+        btn03.addEventListener('click', function (event) {
+            console.log('Відпустили');
+        })
+
+        btn03.addEventListener('contextmenu', function (event) {
+            console.log('contextmenu');
+        })
+
+
+        // Задача
+
+        let box = document.querySelector('.box')
+        console.log(box.offsetWidth);
+
+        let boxWidth = box.offsetWidth;
+
+        // 1: По натисканню кнопки alt ми зменьшуемо єлемент але не меньше його розміру
+        // 2: Екстра, робити не більше довжини єкрану
+        box.addEventListener('click', function (event) {
+            console.log(event.altKey);
+            box.style.width = `${boxWidth = boxWidth + 10}px`
+        })
+
+
+    </script>
+</body>
+
+</html>

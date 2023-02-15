@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="text" type="text">
+    <button class="start">Add Task</button>
+    <div class="out"></div>
+    <div class="count">0</div>
+
+
+    <script>
+        let out = document.querySelector('.out');
+        let textPost = document.querySelector('.text')
+        let count = document.querySelector('.count')
+        let con = 0;
+
+
+        function createList() {
+            if (textPost.value) {
+                count.innerHTML = ++con;
+                let check = document.createElement('input');
+                check.setAttribute('type', 'checkbox')
+                check.classList.add('list__chexbox')
+                check.onchange = () => {
+                    if (check.checked) {
+                        count.innerHTML = --con;
+                        list.classList.add('red')
+                    } else if (!check.checked) {
+                        count.innerHTML = ++con;
+                        list.classList.remove('red')
+                    }
+                }
+
+                let deleteBtn = document.createElement('button')
+                deleteBtn.innerText = 'X'
+                deleteBtn.onclick = () => {
+                    list.parentNode.removeChild(list)
+                    count.innerHTML = --con;
+                }
+
+                let list = document.createElement('li')
+                list.classList.add('list__item')
+                list.append(check)
+                list.append(`Task: ${textPost.value}`)
+                out.append(list)
+                list.append(deleteBtn)
+
+                //list.insertAdjacentElement('afterbegin', check)
+
+            }
+        }
+
+        document.querySelector('.start').onclick = createList;
+
+
+    </script>
+</body>
+
+</html>

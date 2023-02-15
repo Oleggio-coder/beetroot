@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border-radius: 100px;
+        }
+
+        .wrapper {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="box"></div>
+    </div>
+
+    <script>
+
+        let wrap = document.querySelector('.wrapper');
+        let box = document.querySelector('.box');
+        let a = 0
+        // box.addEventListener('mousemove', function (event) {
+        //     box.innerHTML = `
+        //     clientX = ${event.clientX} <br>
+        //     clientY = ${event.clientY} <br>
+        //     `
+        // })
+
+        // wrap.addEventListener('mousemove', function (event) {
+        //     box.style.transform = `translate(${event.clientX - 50}px, ${event.clientY - 50}px)`
+        // })
+
+
+        // function test(a, b) {
+        //     return a * b;
+        // }
+
+
+        // box.addEventListener('click', () => {
+        //     test(10, 5)
+        // })
+
+        function moveBox(event) {
+            wrap.addEventListener('mousemove', function (event) {
+                box.style.transform = `translate(${event.clientX - 50}px, ${event.clientY - 50}px)`
+            })
+        }
+
+        box.addEventListener('click', moveBox)
+
+        // 2: зробити умову якою покласти мячик
+       // box.removeEventListener('click', moveBox)
+
+    </script>
+</body>
+
+</html>

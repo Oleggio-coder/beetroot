@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="out">
+
+</div>
+
+
+<script>
+
+    //https://api.publicapis.org/entries
+    //https://rickandmortyapi.com/api/character/108
+    //http://api.tvmaze.com/search/shows?q=golden%20girls
+
+    const out = document.querySelector('.out')
+
+    let arr = [];
+
+    // Передаємо данні в функцію
+    // fetch('https://api.publicapis.org/entries')
+    //     .then(data => data.json())
+    //     .then(data => newArr(data))
+    //     .catch(err => console.log('Error:', err)) // аналог else
+    //
+    //
+    // function newArr(newData) {
+    //     console.log(newData)
+    // }
+
+    // Передаємо в змінну
+    // fetch('https://api.publicapis.org/entries')
+    //     .then(data => data.json())
+    //     .then(data => {
+    //         arr.push(data)
+    //     })
+    //     .catch(err => console.log('Error:', err)) // аналог else
+    //
+    //
+    // console.log(arr)
+
+
+
+    // Переключаємо сезони https://rickandmortyapi.com/api/character?page=1
+
+    // Асинхронний JS
+    // console.log('Почали обробку')
+    // setTimeout(()=>{
+    //     for(let i = 1; i < 300; i++) {
+    //         fetch(`https://rickandmortyapi.com/api/character/${i}`)
+    //             .then(data => data.json())
+    //             .then(data => {
+    //                 arr.push(data)
+    //             })
+    //             .catch(err => console.log('Error:', err)) // аналог else
+    //     }
+    //     console.log('Закінчили обробку')
+    // }, 1000)
+    //
+    //  setTimeout(()=>{
+    //      console.log(arr)
+    //  }, 1500)
+
+
+   //  function  sasha() {} // ver
+   // let sasha = function () {}
+
+
+    // Асинхронний Promise
+    //resolve: якщо все добре / reject: якщо потрібно зупинити
+    // const p1 = new Promise((resolve, reject)=>{
+    //     setTimeout(()=>{
+    //         for(let i = 1; i < 300; i++) {
+    //             fetch(`https://rickandmortyapi.com/api/character/${i}`)
+    //                 .then(data => data.json())
+    //                 .then(data => {
+    //                     arr.push(data)
+    //                 })
+    //                 .catch(err => console.log(err)) // аналог else
+    //         }
+    //         console.log('Закінчили обробку')
+    //         resolve() // вони означає що можна іті далі
+    //     }, 1000)
+    // })
+    // // .then аналог await
+    //
+    // p1.then(()=>{
+    //     setTimeout(()=>{
+    //         console.log(arr)
+    //     }, 1500)
+    // })
+    //     .catch(err => console.log("Error: ", err))
+
+    // Асинхронний async/await
+    // async function movie() {
+    //     // first
+    //     let a = await fetch(`https://rickandmortyapi.com/api/character/100`)
+    //     let b = await a.json();
+    //
+    //     console.log(b)
+    // }
+    //
+    // movie()
+
+
+
+
+</script>
+</body>
+</html>

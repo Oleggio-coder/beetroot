@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(1fr);
+        }
+
+        .btn-exemlpe1-acord {
+            padding: 0;
+            border: 1px solid;
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.5s;
+        }
+
+        .btn-exemlpe1 {
+            padding: 10px 0;
+            background-color: aqua;
+            display: block;
+            width: 100%;
+            border: none;
+
+        }
+
+        .acord-open {
+            background-color: rgb(4, 135, 135);
+        }
+
+        .acord-open+.btn-exemlpe1-acord {
+            max-height: 1500px;
+            transition: max-height 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="out">
+        <ol id="title" class="out__title">Title <b>Sub</b></ol>
+        <h1 class="out__title2">Title <b>Sub</b></h1>
+        <span class="out__sub-title">sub title</span>
+
+        <h2>Input</h2>
+        <input class="inp" type="text">
+        <input class="check" type="checkbox"> <span>тобі є 18 років</span>
+        <select name="" id="">
+            <option value="Скоттиш фолд">Скоттиш фолд</option>
+            <option value="Другая">Другая</option>
+            <option value="Экзотическая короткошерстная">Экзотическая короткошерстная</option>
+        </select>
+        <img src="" alt="" style="" data-speed="3" class="img">
+
+        <h3>counter</h3>
+        <button>-</button><span>0</span><button>+</button>
+    </section>
+
+    <button class="btn-random">Random</button>
+
+
+    <section>
+        <h2>Click Приклади</h2>
+        <button class="btn-exemlpe">Test</button>
+        <div class="btn-exemlpe-out">0</div>
+    </section>
+
+    <section>
+        <h2>Click по масиву обєктів</h2>
+        <div class="row">
+            <button class="btn-exemlpe1 acord-open">Test 1</button>
+            <div class="btn-exemlpe1-acord ">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus neque ea exercitationem
+                    expedita quas dicta earum accusantium cupiditate ad incidunt velit, repellat optio, omnis, aperiam
+                    aut tenetur? Similique repellat laborum modi ex obcaecati doloremque facere autem deserunt
+                    voluptatibus blanditiis, exercitationem debitis ipsam. Similique nobis commodi fugiat ducimus
+                    dolores minus, dolore repellat aspernatur soluta esse molestiae, quaerat fugit voluptatibus mollitia
+                    sunt beatae aut unde asperiores modi magnam, eligendi atque inventore adipisci magni. Distinctio
+                    repudiandae recusandae labore. Dolorem perferendis tempore facere doloremque nobis quas quos
+                    molestiae aspernatur similique ipsum provident numquam mollitia cupiditate facilis modi, ut ad
+                    officia harum quidem explicabo in.
+                </p>
+            </div>
+            <button class="btn-exemlpe1">Test 2</button>
+            <div class="btn-exemlpe1-acord">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias animi
+                unde
+                maxime exercitationem totam est distinctio. Hic eveniet ipsum recusandae!</div>
+            <button class="btn-exemlpe1">Test 3</button>
+            <div class="btn-exemlpe1-acord">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias animi
+                unde
+                maxime exercitationem totam est distinctio. Hic eveniet ipsum recusandae!</div>
+            <button class="btn-exemlpe1">Test 4</button>
+            <div class="btn-exemlpe1-acord">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias animi
+                unde
+                maxime exercitationem totam est distinctio. Hic eveniet ipsum recusandae!</div>
+            <button class="btn-exemlpe1">Test 5</button>
+            <div class="btn-exemlpe1-acord">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias animi
+                unde
+                maxime exercitationem totam est distinctio. Hic eveniet ipsum recusandae!</div>
+            <button class="btn-exemlpe1">Test 6</button>
+            <div class="btn-exemlpe1-acord">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias animi
+                unde
+                maxime exercitationem totam est distinctio. Hic eveniet ipsum recusandae!</div>
+            <button class="btn-exemlpe1">Test 7</button>
+            <div class="btn-exemlpe1-acord">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias animi
+                unde
+                maxime exercitationem totam est distinctio. Hic eveniet ipsum recusandae!</div>
+        </div>
+
+        <div class="btn-exemlpe-out1">0</div>
+    </section>
+
+    <script src="./main.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Demo styles -->
+    <style>
+        .header {
+            height: 600px;
+            background-color: aquamarine;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .slider__item {
+
+            padding: 20px;
+            border: 1px solid red;
+            border-radius: 20px;
+
+        }
+
+        /* .swiper-pagination-bullet {
+            background-color: red;
+            padding: 20px;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Header</h1>
+    </header>
+    <section class="slider">
+
+        <div class="container">
+
+            <div class="swiper cat-slider">
+                <div class="swiper-wrapper">
+                    <!-- Рендоримо це -->
+                    <div class="swiper-slide">
+                        <div class="slider__item">
+                            <img class="img" src="./cat-2083492_1280.jpg" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos voluptatum
+                                sunt
+                                nisi laudantium aspernatur consequuntur impedit perspiciatis assumenda officia.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item">
+                            <img class="img" src="./cat-2083492_1280.jpg" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos voluptatum
+                                sunt
+                                nisi laudantium aspernatur consequuntur impedit perspiciatis assumenda officia.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item">
+                            <img class="img" src="./cat-2083492_1280.jpg" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos voluptatum
+                                sunt
+                                nisi laudantium aspernatur consequuntur impedit perspiciatis assumenda officia.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item">
+                            <img class="img" src="./cat-2083492_1280.jpg" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos voluptatum
+                                sunt
+                                nisi laudantium aspernatur consequuntur impedit perspiciatis assumenda officia.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item">
+                            <img class="img" src="./cat-2083492_1280.jpg" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos voluptatum
+                                sunt
+                                nisi laudantium aspernatur consequuntur impedit perspiciatis assumenda officia.</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slider__item">
+                            <img class="img" src="./cat-2083492_1280.jpg" alt="">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis quos voluptatum
+                                sunt
+                                nisi laudantium aspernatur consequuntur impedit perspiciatis assumenda officia.</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+    </section>
+
+    <section class="header">
+        <h1>section 2</h1>
+        </header>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            const swiper = new Swiper(".cat-slider", {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+                centeredSlides: true,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+
+                }, navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    // when window width is >= 320px
+                    320: {
+                        slidesPerView: 1.3,
+
+                    },
+                    1200: {
+                        slidesPerView: 3.5,
+
+                    },
+                }
+            });
+
+        </script>
+</body>
+
+</html>

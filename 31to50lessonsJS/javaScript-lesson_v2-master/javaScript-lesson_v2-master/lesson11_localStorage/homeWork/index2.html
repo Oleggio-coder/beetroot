@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            position: relative;
+        }
+
+        .show {
+            position: absolute;
+            right: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- // Екстра реалізувати show password -->
+    <input class="inp" type="text" placeholder="Name">
+    <label for="inpPassword">
+        <input id="inpPassword" class="inp2" type="password" placeholder="Password">
+        <span class="show">&#128065;</span>
+    </label>
+
+    <label for="id1">
+        <input id="id1" type="checkbox"> <span>запамятати</span>
+    </label>
+
+    <button>login</button>
+
+
+    <div class="out">
+        <h4 style="color: green">Login</h4>
+        <!-- <h4 style="color: red">Error</h4> -->
+    </div>
+
+
+
+
+    <script>
+        let user = {
+            login: 'admin',
+            password: 'admin'
+        }
+
+        let inp = document.querySelector('.inp')
+        let inp2 = document.querySelector('.inp2')
+
+        // inp.value = user.login;
+        // inp2.value = user.password;
+        // inp.value = localStorage.getItem('login');
+        // inp2.value = localStorage.getItem('password');
+
+        document.querySelector('button').onclick = () => {
+            localStorage.setItem('login', inp.value)
+            localStorage.setItem('password', inp2.value)
+
+        }
+    </script>
+
+</body>
+
+</html>

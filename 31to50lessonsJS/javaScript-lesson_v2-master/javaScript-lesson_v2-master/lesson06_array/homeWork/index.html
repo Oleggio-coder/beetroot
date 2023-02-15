@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>
+            Валідація
+        </li>
+    </ol>
+    <input class="inp" type="text">
+    <input class="inp1" type="number">
+    <button class="btn">add</button>
+
+
+    <button class="btn2">Show all</button>
+    <button class="delete">delete</button>
+    <div class="out">---</div>
+    <div class="counter">0</div>
+    <div class="out2"></div>
+
+    <section>
+        <h3>Сортування</h3>
+
+        <select name="" id="">
+            <option value="">більше 18</option>
+            <option value="">всі меньше 18</option>
+            <option value="">всі кому за 40</option>
+        </select>
+
+        <button>show</button>
+        <div>0</div>
+    </section>
+
+    <section>
+        <h3>Пошук юзера</h3>
+        <p>не враховувати великі і маленькі букви "A" "a"</p>
+        <input type="text">
+
+        <button>show</button>
+        <div>0</div>
+    </section>
+
+    <script>
+
+        let inp = document.querySelector('.inp')
+        let inp1 = document.querySelector('.inp1')
+        let out = document.querySelector('.out');
+        let out2 = document.querySelector('.out2');
+
+        let users = [];
+        document.querySelector('.btn').onclick = () => {
+            let obj = {
+                name: inp.value,
+                age: inp1.value,
+            }
+            users.push(obj)
+        }
+
+        document.querySelector('.btn2').onclick = () => {
+            out.innerHTML = '';
+            users.map((item) => {
+                out.innerHTML += `<span>Name is ${item.name}</span> <span>and age = ${item.age}</span>  <button>X</button> <br>`;
+            })
+        }
+
+
+
+    </script>
+</body>
+
+</html>

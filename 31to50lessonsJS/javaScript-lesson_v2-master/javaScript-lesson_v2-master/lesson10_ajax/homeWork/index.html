@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .movie__container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap:  16px;
+            padding: 30px 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .movie__img {
+            display: block;
+            width: 100%;
+
+        }
+        .movie__name {
+            font-size: 18px;
+
+        }
+        .movie__item {
+            padding: 16px;
+            border: 1px solid;
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+        }
+        .movie__data {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <div class="container">
+        <select class="select1" name="" id="">
+            <option value="all">all</option>
+        </select>
+    </div>
+
+</nav>
+<section class="movie">
+   <div class="movie__container">
+
+
+
+   </div>
+</section>
+
+
+
+<button class="button" value="1"> Сторінка 1</button>
+<button class="button" value="2"> Сторінка 2</button>
+<button class="button" value="3"> Сторінка 3</button>
+<button class="button" value="4"> Сторінка 4</button>
+<button class="button" value="5"> Сторінка 5</button>
+
+
+<script>
+    // Картка персонажу https://rickandmortyapi.com/api/character?page=1
+    // Серії https://rickandmortyapi.com/api/episode/2
+    // https://rickandmortyapi.com/api/character/826`
+
+    const out = document.querySelector('.movie__container')
+    const select1 = document.querySelector('.select1')
+    const ress = [];
+
+        fetch('https://rickandmortyapi.com/api/character?page=4')
+            .then(data => data.json())
+            .then(data => newArr(data))
+            .catch(err => console.log('Error:', err)) // аналог else
+
+
+
+
+    function createItem(arr) {
+       let item = document.createElement('div')
+       let name = document.createElement('h2')
+       let img = document.createElement('img')
+       let gen = document.createElement('div')
+       let alive = document.createElement('div')
+       let species = document.createElement('div')
+       let data = document.createElement('div')
+
+        item.classList.add('movie__item')
+
+        name.classList.add('movie__name')
+        img.classList.add('movie__img')
+        gen.classList.add('movie__gen')
+        alive.classList.add('movie__alive')
+        species.classList.add('movie__species')
+        data.classList.add('movie__data')
+
+        name.innerHTML = arr.name
+        gen.innerHTML =  `Стать: <b> ${arr.gender} </b>`
+        // якщо мертвий закрашувати в сірий
+        alive.innerHTML =  `Стан здоровя: <b> ${arr.status} </b>`
+        species.innerHTML =  `Вид: <b> ${arr.species} </b>`
+        data.innerHTML =  `Дата народження: <i> ${arr.created} </i>`
+        img.src = arr.image
+
+
+
+
+
+        item.append(name, img, gen, alive, species, data)
+
+        return item
+    }
+
+    // let testA = createItem();
+
+
+
+    // out.onchange = () => {}
+    // out.addEventListener('change', ()=>{})
+
+
+    function newArr(newData) {
+        console.log(newData)
+
+        let arr = newData.results;
+        let select = []
+
+        arr.map((item)=>{
+          let newArr = createItem(item)
+            out.append(newArr)
+            select.push(item.species)
+        })
+
+        let select2 = new Set(select)
+
+
+        select2.forEach((item)=>{
+            select1.innerHTML += `
+             <option value="${item}">${item}</option>
+            `
+        })
+    }
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

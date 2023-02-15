@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .row {
+            width: 500px;
+            border: 1px solid;
+        }
+
+        .tab {
+            display: none;
+            padding: 10px;
+
+        }
+
+        .none {
+            display: block;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            border: 0;
+            background-color: rgb(5, 147, 178);
+            padding: 8px 0;
+            color: #fff;
+        }
+
+        .active {
+            background-color: rgb(4, 85, 103);
+        }
+
+        .tab-cont {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <div class="tab-cont">
+            <button class="btn active">Button</button>
+            <button class="btn">Button</button>
+            <button class="btn">Button</button>
+            <button class="btn">Button</button>
+            <button class="btn">Button</button>
+        </div>
+
+        <div class="tab none">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam sapiente tenetur,
+            reiciendis enim possimus in repellat modi id minima sequi!</div>
+        <div class="tab ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, laboriosam.</div>
+        <div class="tab ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut suscipit neque nemo! Libero
+            minima quae laborum non voluptas impedit dolore blanditiis obcaecati qui, earum consectetur modi expedita
+            corporis quaerat necessitatibus id placeat? Pariatur at quo veniam nobis natus rem quibusdam.</div>
+        <div class="tab ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus consectetur non repellat,
+            inventore in id.</div>
+        <div class="tab ">Lorem ipsum dolor sit amet consectetur.</div>
+    </div>
+
+
+    <script>
+        let btn = document.querySelectorAll('.btn');
+        let tab = document.querySelectorAll('.tab');
+
+        let checkBtn = true;
+
+        // btn.onclick = () => {
+        //   if(checkBtn) {
+        //     checkBtn = false;
+        //     btn.classList.toggle('active')
+        //   } else {
+        //     checkBtn = true;
+        //     btn.classList.remove('active')
+        //   }
+        //   //btn.classList.toggle('active')
+        // }
+
+        btn.forEach(function (item, i) {
+            item.onclick = () => {
+                btn.forEach((i) => {
+                    i.classList.remove('active')
+                })
+                tab.forEach(function (i) {
+                    i.classList.remove('none')
+
+                })
+                tab[i].classList.add('none')
+                item.classList.add('active')
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>

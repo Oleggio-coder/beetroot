@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+
+    <script>
+        const out = document.querySelector('#root')
+
+
+        let cat = [
+            {
+                name: "Kitty",
+                age: 1
+            },
+            {
+                name: "Volt",
+                age: 2
+            },
+            {
+                name: "Dos",
+                age: 1
+            },
+
+        ]
+
+        // .createElement('section') створює єлемент
+        let section = document.createElement('section');
+        section.classList.add('main-section');
+
+        let p = document.createElement('p')
+        p.append('Test text')
+
+        //section.append(p)
+        //appendChild додає один єлемент
+        //out.appendChild(section, p)
+
+        //append додає багато єлемент
+        //out.append(section)
+
+        function createElement(tag, text) {
+            let element = document.createElement(tag)
+            element.innerText = text
+
+            return element;
+        }
+
+        //out.append(createElement('h1', 'Hello'))
+
+        let chekBox = document.createElement('input')
+        chekBox.setAttribute('type', 'checkbox')
+
+        out.append(chekBox)
+
+        // cat.map((cat) => {
+        //     // Old
+        //     // out.innerHTML += `<h2> ${cat.name} </h2>`
+
+        //     let element = document.createElement('h2')
+        //     element.innerText = cat.name
+
+        //     out.append(element)
+        // })
+
+    </script>
+</body>
+
+</html>

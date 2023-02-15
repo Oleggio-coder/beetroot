@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="out">
+
+    </div>
+
+    <script>
+
+        let users = [
+            {
+                name: 'sasha 0',
+                age: 20
+            },
+            {
+                name: 'sasha 1',
+                age: 16
+            },
+            {
+                name: 'sasha 2',
+                age: 33
+            },
+            {
+                name: 'sasha 3',
+                age: 55
+            },
+            {
+                name: 'sasha 4',
+                age: 10
+            },
+        ]
+
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].age > 18) {
+                console.log(users[i].name);
+            }
+        }
+
+        users.map((i) => {
+            if (i.age > 18) {
+                document.querySelector('.out').innerHTML += `
+                <h2>${i.name} </h2> 
+                `
+            };
+        })
+
+        // users.forEach((i) => {
+        //     if (i.age > 18) {
+        //         document.querySelector('.out').innerHTML += `
+        //         <h2>${i.name} </h2>
+        //         `
+        //     };
+        // })
+
+    </script>
+</body>
+
+</html>

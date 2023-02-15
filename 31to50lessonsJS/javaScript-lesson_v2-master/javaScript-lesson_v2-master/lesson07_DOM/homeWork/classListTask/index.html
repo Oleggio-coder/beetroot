@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            background-color: red;
+        }
+
+        .btn-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            max-width: 600px;
+        }
+
+
+        .btn {
+            padding: 10px 0;
+            background-color: aqua;
+            display: block;
+            width: 100%;
+            border: none;
+
+        }
+
+        .open {
+            background-color: rgb(4, 135, 135);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="btn-container">
+        <button class="btn open">Test 1</button>
+        <button class="btn">Test 2</button>
+        <button class="btn">Test 3</button>
+        <button class="btn">Test 4</button>
+        <button class="btn">Test 5</button>
+    </div>
+
+    <div class="content-container">
+        <div class="btn-content open-tab">lorem 1</div>
+        <div class="btn-content">lorem 2</div>
+        <div class="btn-content">lorem 3</div>
+        <div class="btn-content">lorem 4</div>
+        <div class="btn-content">lorem 5</div>
+        <div class="btn-content">lorem 6</div>
+    </div>
+
+
+
+    <script>
+        let btn = document.querySelectorAll('.btn');
+        let btnArr = document.querySelectorAll('.btn-content');
+
+
+        btn.forEach((item, index) => {
+            item.onclick = () => {
+                console.log(item);
+                console.log(btnArr[index]);
+            }
+        })
+
+        // btn[0].classList.toggle('active')
+        // btnArr[0].classList.toggle('active')
+
+    </script>
+</body>
+
+</html>

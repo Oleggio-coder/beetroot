@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./0.jpeg" alt="cat" width="300">
+
+
+    <script>
+        let img = document.querySelector('img')
+
+        // Виводить рандомне число 
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        // Задача
+        // Кри клікі на картинку вони повинна рандомно змінюватися в діапазоні от 1 до 4
+        img.onclick = () => {
+
+            // Код пишимо тут
+            // Додаємо або переписуємо
+            // img.setAttribute('src', './0.jpeg');
+
+            let random = getRandomInt(4)
+
+            console.log(random);
+        }
+    </script>
+</body>
+
+</html>

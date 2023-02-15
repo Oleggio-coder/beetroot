@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .title {
+            font-family: sans-serif;
+            font-size: 40px;
+            color: green;
+            text-align: center;
+        }
+
+        .pets {
+            font-family: sans-serif;
+        }
+
+        .pets__container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+        }
+
+        .pets__item {
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .pets__img {
+            display: block;
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 16px;
+        }
+
+        .pets__name {
+            margin: 10 0 16px;
+        }
+
+        .pets__price {
+            color: green;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="title">Pets Shop 😼</h2>
+    <div class="nav">
+        <button class="nav__btn">Від Дешевого</button>
+        <button class="nav__btn">Від Дорогого</button>
+        <select name="" id="">
+            <option value="Скоттиш фолд">Скоттиш фолд</option>
+            <option value="Другая">Другая</option>
+            <option value="Экзотическая короткошерстная">Экзотическая короткошерстная</option>
+        </select>
+    </div>
+    <div class="pets">
+        <div class="pets__container">
+            <!-- Рендорити сюди -->
+
+
+
+            <!-- Кінець-->
+        </div>
+    </div>
+
+    <script>
+        const pets = [
+            {
+                name: "Скоттиш фолд", // Порода
+                description: 'Золотой шотландский вислоухий кот ждет в гости кошечку для совместного времяпровождения. Одной встречи достаточно для получения красивого и здорового потомства. У полуторагодовалого',
+                location: "Київ, Київська область",
+                price: "4500 грн",
+                url: 'https://d1opu7v3g3cdvy.cloudfront.net/213x160/4ZN2o7krAB7SsGcJjX93.webp'
+            },
+            {
+                name: "Скоттиш фолд", // Порода
+                description: 'Гарний ,охайний котик. Привчений до лотка,їсть сухий корм. Любить гратися. Котику майже 4 місяці.( В подарунок 2 лоточка для туалету.',
+                location: "Київ, Київська область",
+                price: "1500 грн",
+                url: 'https://d1opu7v3g3cdvy.cloudfront.net/213x160/o4b5MCkz9QUV6sgVCPzV.webp'
+            },
+            {
+                name: "Другая", // Порода
+                description: 'Все вопросы обсуждаются в телефонном разговоре, а не в переписке. Большая просьба звонить с 10 до 20 часов.Елка - глазастая, красивая и яркая, но колкая, если хочешь прикоснуться. Елка из тех',
+                location: "Київ, Київська область",
+                price: "1 грн",
+                url: 'https://d1opu7v3g3cdvy.cloudfront.net/213x160/jKmG4ZOy05MmybPcazEl.webp'
+            },
+            {
+                name: "Экзотическая короткошерстная", // Порода
+                description: 'Великолепный малыш Экзот, 2 месяца Лоток и когтеточку знает без проблем. Очень ласковый и нежная мальчик. Питание : сухой корм премиум класса и натуралка. Больше фото и видео вышлю в',
+                location: "Київ, Київська область",
+                price: "5000 грн",
+                url: 'https://d1opu7v3g3cdvy.cloudfront.net/213x160/WZ0RZ4x6GQ2VUENFTPrm.webp'
+            },
+            {
+                name: "Экзотическая короткошерстная", // Порода
+                description: 'Экзотический мальчик медвежульного типа) Упитанный и классный! С отличным костяком Чистокровный, обучен лотку Пишите в вайбер вышлю больше фото, видео',
+                location: "Київ, Київська область",
+                price: "1300 грн",
+                url: 'https://d1opu7v3g3cdvy.cloudfront.net/213x160/iV8s1E5lPpU7wdJIAO7K.webp'
+            },
+
+        ]
+
+        let petsCont = document.querySelector('.pets__container')
+        pets.map((pet) => {
+            // Перетрорює строку в число
+            // let a = parseInt(pet.price); 
+            // console.log(a);
+            petsCont.innerHTML += `
+                <div class="pets__item"> 
+                <h3 class="pets__name">${pet.name}</h3>
+                <img class="pets__img" src="${pet.url}" alt="">
+                <div class="pets__price">${pet.price}</div>
+                <p class="pets__description">${pet.description}</p>
+                <h5 class="pets__loc">${pet.location}</h5>
+            </div>
+            `
+        })
+
+        // Пасхалочка
+
+        // Приклад сортування по прайсу 
+        // https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+        let newPet = pets.sort((a, b) => {
+            if (a.price > b.price) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+        console.log(newPet); // отримуємо новий масив де йде сортування оп ціні від меньшої
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button class="clear">
+        clear
+    </button>
+
+    <div class="out">
+
+    </div>
+
+
+    <script>
+
+        let btnClear = document.querySelector('.clear')
+        let out = document.querySelector('.out')
+        // let number = 40;
+        let number1 = 60;
+
+
+        let arr = ['Sasha1', 'Sasha2', 'Sasha3']
+
+        let obj = [
+            {
+                name: "Sasha 1",
+                age: 23
+            },
+            {
+                name: "Sasha 2",
+                age: 12
+            },
+            {
+                name: "Sasha 3",
+                age: 23
+            },
+            {
+                name: "Sasha 4",
+                age: 01
+            },
+            {
+                name: "Sasha 5",
+                age: 44
+            },
+        ]
+
+
+        localStorage.setItem('numTest', number1)
+        localStorage.setItem('arr', arr)
+        localStorage.setItem('obj', obj)
+        //sessionStorage.setItem('numTest2', number1)
+
+        // Видаляємо ключ
+        localStorage.removeItem('numTest')
+
+
+        let arr2 = localStorage.getItem('arr')
+        let obj2 = localStorage.getItem('obj')
+
+        out.innerHTML = obj2
+
+        console.log(typeof obj2);
+
+        btnClear.onclick = () => {
+            localStorage.clear()
+        }
+
+
+        // Перетворюємо строки в масиви
+
+        localStorage.setItem('arrStr', JSON.stringify(obj))
+
+
+        // короткий запис
+        //let arrAtr = JSON.parse(localStorage.getItem('arrStr'))
+
+        let arrAtr = localStorage.getItem('arrStr')
+        let arrJson = JSON.parse(arrAtr)
+
+        console.log(arrJson);
+
+    </script>
+</body>
+
+</html>

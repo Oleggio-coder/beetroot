@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .out {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 10px;
+        }
+
+        .item {
+            padding: 10px;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .wrapp {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: antiquewhite;
+        }
+
+        .out2 {
+
+            cursor: pointer;
+
+            padding: 10px;
+            color: #fff;
+            background-color: red;
+        }
+
+        .out2__item {
+            padding: 0 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 2s ease-in-out;
+        }
+
+        .out2__item-active {
+            max-height: 2000px;
+            transition: all 0.6s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="out"></div>
+
+    <div class="wrapp">
+        <div class="out2">0</div>
+
+        <div class="out2__item">
+
+        </div>
+    </div>
+
+
+    <script>
+        let obj = [
+            {
+                name: "Sasha 1",
+                age: 23
+            },
+            {
+                name: "Sasha 2",
+                age: 12
+            },
+            {
+                name: "Sasha 3",
+                age: 23
+            },
+            {
+                name: "Sasha 4",
+                age: 01
+            },
+            {
+                name: "Sasha 5",
+                age: 44
+            },
+        ]
+
+        let out = document.querySelector('.out')
+        let out2 = document.querySelector('.out2')
+        let outItem = document.querySelector('.out2__item')
+
+        let arr = JSON.parse(localStorage.getItem('fav')) ? JSON.parse(localStorage.getItem('fav')) : [];
+
+
+        function createItem(item) {
+            let wrap = document.createElement('div')
+            let name = document.createElement('h3')
+            let age = document.createElement('p')
+            let button = document.createElement('button')
+
+            button.addEventListener('click', () => {
+                arr.push(item)
+                localStorage.setItem('fav', JSON.stringify(arr))
+                console.log(arr);
+                favShow()
+            }, { 'once': true })
+
+
+
+            console.log(arr);
+            wrap.classList.add('item')
+
+            name.innerHTML = item.name;
+            age.innerHTML = item.age;
+            button.innerHTML = 'add'
+            wrap.append(name, age, button)
+
+            return wrap
+        }
+
+        function favShow() {
+            out2.innerHTML = arr.length
+        }
+        favShow()
+
+        out2.addEventListener('click', () => {
+
+
+            outItem.innerHTML = ''
+
+            arr.forEach((item) => {
+                let name = document.createElement('h5')
+                name.innerHTML = item.name
+                outItem.append(name)
+            })
+            outItem.classList.toggle('out2__item-active')
+        })
+
+        obj.forEach((item) => {
+            out.append(createItem(item))
+        })
+
+    </script>
+
+</body>
+
+</html>

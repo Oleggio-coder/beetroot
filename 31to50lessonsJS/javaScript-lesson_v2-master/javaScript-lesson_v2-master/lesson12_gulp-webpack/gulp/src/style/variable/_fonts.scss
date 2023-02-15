@@ -1,0 +1,12 @@
+$main-font: 'Courier New', Courier, monospace;
+$sub-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+.title {
+    //font-weight
+   font: 700 30px/32px $main-font;
+   
+}
+
+.text {
+    font: 400 16px/22px $sub-font; 
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="inp1" type="text" name="" id="" placeholder="Name">
+    <input class="inp2" type="text" name="" id="" placeholder="Age">
+    <button class="btn">Add</button>
+
+    <div class="out">test</div>
+
+
+    <script>
+
+        let inp1 = document.querySelector('.inp1')
+        let inp2 = document.querySelector('.inp2')
+        let btn = document.querySelector('.btn')
+
+
+        let arr = []
+
+        const obj = {
+            name: "Sasha",
+            age: 12
+        }
+
+        console.log(obj);
+
+        function num(a, b) {
+            return {
+                name: a,
+                age: b
+            };
+        }
+
+
+
+        class User {
+            constructor(name, age) {
+                this.name = name;
+                this.age = +age
+            }
+
+            info() {
+                console.log('Name: ' + this.name + " " + "Age: " + this.age);
+            }
+
+            get Age() {
+                return 2023 - this.age
+            }
+
+            set Age(newAge) {
+                this.age = newAge
+            }
+
+        }
+
+
+        let Sasha = new User('Sasha', 1998)
+
+        Sasha.info()
+
+        Sasha.Age // Звертаемось без дужок ()
+
+        Sasha.Age = 1988;
+
+        console.log(Sasha.Age);
+
+        btn.addEventListener('click', () => {
+            let newUser = new User(inp1.value, inp2.value)
+            arr.push(newUser)
+
+            console.log(arr);
+        })
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="inp" type="text">
+    <button class="btn">add</button>
+    <!-- <div class="error">Error</div> -->
+    <ol class="out">
+
+    </ol>
+
+    <div class="couter">0</div>
+
+
+
+
+    <script>
+        let ipn = document.querySelector('.inp')
+        let btn = document.querySelector('.btn')
+        let out = document.querySelector('.out')
+
+        let cout = 0;
+
+        // 1: Не довати однакові інпут текс і пустий + додати вілідвціоний текст
+        // 2: зробити UI 
+
+        function toDoList() {
+            let list = document.createElement('li')
+            list.innerText = ipn.value;
+
+            let chek = document.createElement('input');
+            chek.setAttribute('type', 'checkbox')
+            chek.onchange = () => {
+                if (chek.checked) {
+                    list.classList.add('red')
+                    //document.querySelector('.couter').innerHTML = ++cout
+                } else {
+                    list.classList.remove('red')
+                    //document.querySelector('.couter').innerHTML = --cout
+                }
+            }
+
+            let button = document.createElement('button');
+            button.innerText = "X"
+            // При видаленні list робити каунтер -1
+            button.onclick = () => {
+                list.parentNode.removeChild(list);
+            }
+
+            //document.querySelector()
+            list.append(chek)
+            list.append(button)
+            out.append(list)
+        }
+
+        btn.onclick = toDoList;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input class="inp1" type="text" name="" id="" placeholder="Name">
+    <input class="inp2" type="text" name="" id="" placeholder="Age">
+    <button class="btn">Add</button>
+
+
+
+
+
+    <button class="btn1">Change</button>
+    <div class="out">test</div>
+
+
+    <script>
+
+        let inp1 = document.querySelector('.inp1')
+        let inp2 = document.querySelector('.inp2')
+        let btn = document.querySelector('.btn')
+
+
+        let arr = []
+
+        function num(a, b) {
+            return {
+                name: a,
+                age: b
+            };
+        }
+
+
+
+        class User {
+            constructor(option) {
+                this.name = option.name;
+                this.age = option.age;
+            }
+
+            info() {
+                let s = "sasha"
+                console.log('Name : ' + this.name + " " + "Age: " + this.age);
+            }
+
+            get Age() {
+                return 2023 - this.age
+            }
+
+            set Age(newAge) {
+                this.age = newAge
+            }
+
+        }
+
+
+        let Sasha = new User({
+            name: "Sasha",
+            age: 22
+        })
+
+
+        console.log(Sasha);
+
+
+        class UserColor extends User {
+            constructor(option) {
+                super(option)
+                this.color = option.color;
+            }
+
+            info() {
+
+                super.info()
+
+
+            }
+
+        }
+
+
+        let Vova = new UserColor({
+            name: "Sasha",
+            age: 22,
+            color: 'red'
+
+        })
+
+        Vova.info()
+
+        console.log(Vova);
+
+
+
+
+
+
+
+        let out = document.querySelector('.out')
+        let btn1 = document.querySelector('.btn1')
+        // Name cat = Kitty
+
+        // Img = https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1144982182.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*
+
+        class Cat {
+            constructor(option) {
+                this.name = option.name;
+                this.img = option.img;
+            }
+
+            get ShowImg() {
+                return `
+                <div> 
+                    <h1>${this.name}</h1>
+                    <img width="200" src="${this.img}">
+                    </div>
+               
+                `
+            }
+            set ShowImg(newImg) {
+                this.img = newImg.img;
+                this.name = newImg.name;
+            }
+        }
+
+
+        let Kitty = new Cat({
+            name: "Kitty",
+            img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1144982182.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*'
+        })
+
+        //https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80
+        out.innerHTML = Kitty.ShowImg
+
+        // Kitty.ShowImg = "test"
+        // console.log(Kitty.ShowImg);
+        btn1.addEventListener('click', () => {
+            Kitty.ShowImg = { name: "Sasha", img: 'https://images.unsplash.com/photo-1611915387288-fd8d2f5f928b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80' }
+            out.innerHTML = Kitty.ShowImg
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

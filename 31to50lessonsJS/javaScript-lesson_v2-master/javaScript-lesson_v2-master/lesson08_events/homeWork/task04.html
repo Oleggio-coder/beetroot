@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 1px solid;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="out"></div>
+
+    <div class="box"></div>
+
+    <script>
+        let box = document.querySelector('.box')
+
+        let right = 0;
+        // Зробити шоб не можна було вийти за рамки window
+        // 2: Щоб shift + ArrowRight збільшував швидкість в два рази 
+
+        document.addEventListener('keydown', function (event) {
+            console.log(event);
+            if (event.key == 'ArrowRight') {
+                box.style.left = `${right = right + 10}px`
+            } else if (event.key == 'ArrowLeft') {
+                box.style.left = `${right = right - 10}px`
+            }
+
+        })
+    </script>
+</body>
+
+</html>

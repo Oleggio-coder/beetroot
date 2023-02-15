@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>Фікс: <br>1: Щоб юзер не міг дублювати<br>2: Вілідіція якщо пусті імпути, якщо хочаб одне не заповнена <br> 3: вік і телефон толькі цифри + щоб не меньше нуля</h2>
+    <input class="name" type="text" name="" id="" placeholder="name">
+    <input class="age" type="text" name="" id="" placeholder="age">
+    <input class="tel" type="text" name="" id="" placeholder="tel">
+    <button>add</button>
+    <ol class="out">
+
+    </ol>
+
+
+    <section>
+        sectio 2
+        <ol class="out2">
+
+        </ol>
+        <button class="btn2">add</button>
+    </section>
+
+
+
+
+    <script>
+        let name = document.querySelector('.name');
+        let age = document.querySelector('.age');
+        let tel = document.querySelector('.tel');
+        let btn = document.querySelector('button');
+        let out = document.querySelector('.out');
+        let out2 = document.querySelector('.out2');
+
+
+        function userAdd(out, name, age, tel) {
+            out.innerHTML += `
+   <li>
+     <span> Name: ${name}</span>
+     <span> Age: ${age}</span>
+     <a href="tel:${tel}">${tel}</a>
+   </li>
+  `
+        }
+
+        btn.onclick = () => {
+            userAdd(out, name.value, age.value, tel.value)
+        }
+        document.querySelector('.btn2').onclick = () => {
+            userAdd(out2, name.value, age.value, tel.value)
+        }
+    </script>
+</body>
+
+</html>

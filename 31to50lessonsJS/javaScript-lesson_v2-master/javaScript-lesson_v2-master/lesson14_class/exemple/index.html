@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="out"></div>
+
+
+    <script>
+
+
+
+        // Name cat = Kitty
+
+        // Img = https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1144982182.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*
+
+
+        let out = document.querySelector('.out')
+
+        class Cat {
+            constructor(option) {
+                this.name = option.name;
+                this.img = option.img;
+            }
+
+            show() {
+                let div = document.createElement('div');
+                let h1 = document.createElement('h1');
+                let img = document.createElement('img');
+                h1.innerHTML = this.name;
+                img.src = this.img;
+                img.width = 200;
+                div.append(h1, img);
+                return div;
+
+            }
+        }
+
+        let Kitty = new Cat({
+            name: 'Kitty',
+            img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1144982182.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*'
+        })
+
+        //console.log(Kitty);
+
+
+        class CatColor extends Cat {
+            constructor(options) {
+                super(options);
+                this.color = options.color;
+            }
+
+            show() {
+                let div = document.createElement('div');
+                let h1 = document.createElement('h1');
+                let img = document.createElement('img');
+                h1.innerHTML = this.name;
+                img.src = this.img;
+                img.width = 200;
+                h1.style.color = this.color;
+                div.append(h1, img);
+                return div;
+
+            }
+        }
+        let Archie = new CatColor({
+            name: 'Archie',
+            img: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-1144982182.jpg?crop=0.669xw:1.00xh;0.166xw,0&resize=1200:*',
+            color: 'green'
+        })
+        console.log(Archie);
+        out.appendChild(Archie.show())
+
+    </script>
+</body>
+
+</html>

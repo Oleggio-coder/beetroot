@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <script>
+
+        let box = document.querySelector('.box')
+
+        let boxWidth = box.offsetWidth;
+
+        // 1: По натисканню кнопки alt ми зменьшуемо єлемент але не меньше його розміру
+        // 2: Екстра, робити не більше довжини єкрану
+        box.addEventListener('click', function (event) {
+            console.log(event.altKey);
+            box.style.width = `${boxWidth = boxWidth + 10}px`
+        })
+    </script>
+</body>
+
+</html>

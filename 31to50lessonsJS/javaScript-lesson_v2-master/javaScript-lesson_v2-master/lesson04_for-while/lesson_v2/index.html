@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="out"></div>
+    <script>
+
+        for (let i = 0; i < 11; i++) {
+            if (i == 8) {
+                console.log("Гравуць: " + i);
+                break;
+            }
+            console.log("Гравуць: " + i);
+        }
+
+        for (let i = 0; i < 11; i++) {
+            if (i == 5) continue;
+            console.log(i);
+        }
+
+        for (let i = 0; i < 10; i++) {
+            // Не Четні
+            if (i % 2) {
+                console.log("Не четні: " + i);
+            }
+            // Четні
+            // if (i % 2 == 0) {
+            //     console.log("четні: " + i);
+            // }
+        }
+
+        stop: for (let i = 0; i < 4; i++) {
+            console.log("Перший рівень: " + i);
+            for (let j = 0; j < 4; j++) {
+                if (j == 2) break stop;
+                console.log("Перший рівень: " + i + " Другий рівень: " + j);
+
+            }
+        }
+
+
+        for (let i = 10; i > 0; i--) {
+            console.log(i);
+        }
+
+
+
+        let res = '';
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j < i; j++) {
+                res += "*"
+            }
+            console.log(res);
+        }
+
+
+        let users = [{
+            name: 'Sasha',
+            age: 22
+        },
+        {
+            name: 'olya',
+            age: 16
+        },
+        {
+            name: 'vika',
+            age: 33
+        },
+        {
+            name: 'sveta',
+            age: 22
+        }];
+
+
+
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                console.log(i + '' + j + "_");
+
+            }
+
+        }
+
+
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].age > 18) {
+                document.querySelector('.out').innerHTML += `
+                <h2> Привіт:  ${users[i].name}</h2>
+                <h3> Рік: ${users[i].age} </h3>
+                `;
+            } else {
+                document.querySelector('.out').innerHTML += `
+                <h2 style="color:red"> Привіт:  ${users[i].name}</h2>
+                <h3 style="color:red"> Ви зможете зайти: ${18 - users[i].age}років </h3>
+                `;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
