@@ -1,0 +1,11 @@
+.blog__item {
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+
+.blog__item:hover {
+  background-color: aqua;
+}

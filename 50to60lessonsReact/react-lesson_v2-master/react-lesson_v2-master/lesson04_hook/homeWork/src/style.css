@@ -1,0 +1,11 @@
+.rick__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+}
+
+.rick__cart {
+    padding: 10px;
+    border: 1px solid;
+
+}

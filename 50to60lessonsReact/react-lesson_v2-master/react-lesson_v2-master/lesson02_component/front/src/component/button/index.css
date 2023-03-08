@@ -1,0 +1,18 @@
+.button {
+    background: #2c3e50;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #f2f2f2;
+    padding: 10px 20px;
+    display: block;
+}
+
+.button--blue{
+    background: blue;
+}
+
+.button--red {
+    background: red;
+}

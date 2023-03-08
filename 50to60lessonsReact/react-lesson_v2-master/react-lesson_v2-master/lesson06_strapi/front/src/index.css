@@ -1,0 +1,11 @@
+.carts {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 20px;
+}
+
+.carts__item {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 20px;
+}
